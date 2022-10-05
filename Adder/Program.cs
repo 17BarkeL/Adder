@@ -12,17 +12,26 @@ namespace Adder
         {
             Console.WriteLine("Adder:\n");
 
+            int sum = AddTwoNumbers();
+
+            Console.WriteLine($"Result: {sum}");
+
+            Console.ReadLine();
+        }
+
+        /// <summary>
+        /// Gets 2 integer numbers from user and adds them together
+        /// </summary>
+        /// <returns>The sum of the two numbers from the user</returns>
+        static int AddTwoNumbers()
+        {
             Console.Write("Enter number 1: ");
             int number1 = int.Parse(Console.ReadLine());
 
             Console.Write("Enter number 2: ");
             int number2 = int.Parse(Console.ReadLine());
 
-            int sum = number1 + number2;
-
-            Console.WriteLine($"Result: {sum}");
-
-            Console.ReadLine();
+            return number1 + number2;
         }
     }
 }
